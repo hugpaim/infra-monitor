@@ -14,10 +14,10 @@
 ## 📐 Architecture
 
 ```
-┌─────────────────────────────────────────────────────┐
-│         Collectors (psutil)                         │
-│   CPU │ Memory │ Disk │ Network │ Processes          │
-└──────────────────────┬──────────────────────────────┘
+┌─────────────────────────────────────────────┐
+│         Collectors (psutil)                 │
+│   CPU │ Memory │ Disk │ Network │ Processes │
+└──────────────────────┬──────────────────────┘
                        │
          ┌─────────────▼─────────────┐
          │      MetricsStore         │
@@ -25,18 +25,18 @@
          └──────┬──────────┬─────────┘
                 │          │
    ┌────────────▼──┐  ┌────▼──────────────────┐
-   │   Dashboard   │  │     AlertEngine        │
-   │  (Rich Live)  │  │  threshold evaluation  │
-   └───────────────┘  └────┬─────────────┬─────┘
+   │   Dashboard   │  │     AlertEngine       │
+   │  (Rich Live)  │  │  threshold evaluation │
+   └───────────────┘  └────┬─────────────┬────┘
                            │             │
                     ┌──────▼──┐  ┌───────▼─────────┐
-                    │ Console │  │ Webhook / Logfile│
+                    │ Console │  │Webhook / Logfile│
                     └─────────┘  └─────────────────┘
                                         │
                        ┌────────────────▼────────────┐
-                       │     PrometheusExporter       │
-                       │        :9100/metrics         │
-                       └──────────────────────────────┘
+                       │     PrometheusExporter      │
+                       │        :9100/metrics        │
+                       └─────────────────────────────┘
 ```
 
 ## 📁 Project Structure
