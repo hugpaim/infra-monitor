@@ -7,6 +7,7 @@
 ![Rich](https://img.shields.io/badge/Rich-TUI-000000?style=flat-square)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![CI](https://github.com/hugpaim/infra-monitor/actions/workflows/ci.yml/badge.svg)
 
 ---
 
